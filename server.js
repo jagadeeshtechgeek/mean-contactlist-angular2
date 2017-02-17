@@ -24,7 +24,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
 
   // Save database object from the callback for reuse.
   db = database;
-  console.log("Database connection ready");
+  console.log("Database connection ready :: "+process.env.MONGODB_URI);
 
   // Initialize the app.
   var server = app.listen(process.env.PORT || 8080, function () {
